@@ -45,6 +45,23 @@
 				footer {margin-top: 20px;}
 			}
 		</style>
+		<script>
+		var isMobile = {
+   			Android: function() {
+       			return navigator.userAgent.match(/Android/i);
+    		},
+    			iOS: function() {
+        		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    		}
+	    };
+		if ( isMobile.Android() ) {
+   			document.location.href = "https://play.google.com/store/apps/details?id=com.socialqnect.RamblerQnect&hl=en";
+		} else if(isMobile.iOS()) {
+			document.location.href="https://itunes.apple.com/us/app/rambler-qnect/id1218968658?mt=8";
+		} else {
+			console.log("desktop")
+		}
+</script>
 	</head>
 	
 <body>
